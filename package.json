@@ -1,0 +1,21 @@
+{
+  "name": "temporal-orchestrator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A hands-on demo of Temporal workflows in JavaScript",
+  "scripts": {
+    "server": "docker compose up -d",
+    "server:stop": "docker compose down",
+    "worker": "node src/worker.js",
+    "start": "node src/client.js start",
+    "approve": "node src/client.js approve",
+    "reject": "node src/client.js reject",
+    "status": "node src/client.js status"
+  },
+  "dependencies": {
+    "@temporalio/activity": "^1.24.0",
+    "@temporalio/client": "^1.24.0",
+    "@temporalio/worker": "^1.24.0",
+    "@temporalio/workflow": "^1.24.0"
+  }
+}
